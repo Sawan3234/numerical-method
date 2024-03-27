@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/PAWAN/Desktop/numerical-method",
-      "program": "c:/Users/PAWAN/Desktop/numerical-method/build/Debug/outDebug",
+      "cwd": "c:/Users/PAWAN/Desktop/sawan NM",
+      "program": "c:/Users/PAWAN/Desktop/sawan NM/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
