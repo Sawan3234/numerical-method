@@ -29,11 +29,11 @@ A[i][k]=A[i][k]-r*A[j][k];
 }
 }
 }
-printf("\nThe solution is:\n");
+printf("The solution is:");
 for(i=1; i<=n; i++)
 {
 x[i]=A[i][n+1]/A[i][i];
-printf("\n x%d=%f\n",i,x[i]);
+printf("x%d=%f ",i,x[i]);
 }
 getch();
 return 0;

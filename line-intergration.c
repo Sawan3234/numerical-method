@@ -7,7 +7,7 @@ double lineIntegration (double x1,double x2,double(*function)(double))
 }
 double function (double x)
 {
-    return 2*x*x+1;
+    return 2*x+1;
 }
 int main()
 {

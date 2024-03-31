@@ -1,25 +1,41 @@
 #include<stdio.h>
 #include<conio.h>
+#include<math.h>
+#define error 0.001
 int main()
 {
-    int n,i,j,k;
-    float a=0,b=0,x[100],y[100],sx=0,sy=0,sxy=0,sx2=0;
-    printf("Enter the number of points:");
-    scanf("%d",&n);
-    printf("Enter the value of x and fx:\n");
-    for(i=0;i<n;i++)
-    {
-        scanf("%f %f",&x[i],&y[i]);
-    }
-    for(i-0;i<n;i++)
-    {
-        sx=sx+x[i];
-        sy=sy+y[i];
-        sxy=sxy+x[i]*y[i];
-        sx2=sx2+x[i]*x[i];
-    }
-    b=((n*sxy)-(sx*sy))/((n*sx2)-(sx*sx));
-    a=(sy/n)-(b*sx/n);
-    printf("Fitted line is:%f + %fx",a,b);
-    getch();
+int i, n;
+float x[10], y[10], sumx=0.0,sumy=0.0;
+float sumxx=0.0, sumxy=0.0;
+float meanx, meany, denom, a, b;
+printf("how many element?:");
+scanf("%d", &n);
+for(i=0;i<n;i++)
+{
+printf("x[%d]&y[%d]:",i,i);
+scanf("%f %f",&x[i],&y[i]);
+
+}
+for(i=0;i<n;i++)
+{
+sumx+=x[i];
+sumy+=y[i];
+sumxx+=x[i]*x[i];
+sumxy+=x[i]*y[i];
+}
+meanx=sumx/n;
+meany=sumy/n;
+denom=n*sumxx-sumx*sumx;
+if(fabs(denom)>error)
+{
+b=(n*sumxy-sumx*sumy)/denom;
+a=meany-b*meanx;
+printf("y=%f+%fx",a,b);
+}
+else
+{
+printf("\nNo Solution");
+}
+getch();
+return 0;
 }

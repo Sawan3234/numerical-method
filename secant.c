@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<math.h>
-#define EPSILON 0.0001
+#define EPSILON 0.05
 float findvalueat(float x)
 {
-    return x*x*x-5*x+1;
+    return 2*x*x+4*x-10;
 }
 float findx(float x1,float x2)
 {

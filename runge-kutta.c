@@ -26,9 +26,9 @@ m3 = func(x0+0.5*h, y0+0.5*m2*h);
 m4 = func(x0+h, y0+m3*h);
 x0 = x0+h;
 y0 = y0+(m1+2*m2+2*m3+m4)*h/6;
-printf("%f\t%f\n", x0, y0);
+
 }
-printf("\nValue of y at x=%f is %f",x0, y0);
+printf("Value of y at x=%f is %f",x0, y0);
 getch();
 return 0;
 }

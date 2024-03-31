@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
-#define f(x,y) 2*(y)/(x)
+#define f(x,y) 2*x+y
 int main()
 {
     float x,xp,x0,y0,y,h,m1,m2;

@@ -1,66 +1,27 @@
 #include<stdio.h>
+#include<conio.h>
 #include<math.h>
-#define EPSILON 0.001
+float g ( float x)
+{
 
-float f(float x)
-{
-    return x*x*x-x-4;
-}
-float findvalueat(float x)
-{
-    return 1/sqrt(1+x);
-}
-float differentiate(float x)
-{
-    return -1/2.0*(pow((1+x),-3/2));
+return x*x-6*x+8;
 }
 int main()
-
 {
-    int maxiteration,i;
-    float a,b,x,x0;
-    printf("enter maxaium no of iterations\n");
-    scanf("%d",&maxiteration);
-
-    do
-    {
-        printf("enter the value of a and b(starting boundary)");
-        scanf("%f %f",&a,&b);
-        if(f(a)*f(b)>0)
-        {
-            printf("boundary values are invalid\n");
-            continue;
-        }
-        else{
-            printf("roots lie between %f and %f\n",a,b);
-            break;
-        }
-
-        
-    } while (1);
-    {
-        x0=(a+b)/2;
-        if(fabs(differentiate(x0))<1)
-        printf("function form is correct.\n");
-        else
-        {
-            printf("function form is is correct.\n");
-            return 0;
-        }
-
-        for(i=1;i<=maxiteration;i++)
-        {
-            x=findvalueat(x0);
-            if(fabs(x-x0)<EPSILON)
-            {
-                printf("iterations=%d final root=%f\n",i,x);
-                return 0;
-            }
-            printf("iterations=%d roots=%f\n",i,x);
-            x0=x;
-        }
-        printf("root=%f total iterations=%d",x,--i);
-        return 0;
-    }
-    
+float x0, x, error, E=0.01;
+printf("Input initial estimate of a root:\n");
+scanf("%f", &x0);
+while(1)
+{
+x=g(x0);
+error=(x-x0)/x;
+if(fabs(error)<E)
+{
+printf("\nRoot=%f", x0);
+break;
+}
+x0=x;
+}
+getch();
+return 0;
 }

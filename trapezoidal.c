@@ -3,7 +3,7 @@
 #include<math.h>
 float f(float x)
 {
-return (exp(-x*x));
+return (1-exp(-x/2.0));
 }
 void main()
 {

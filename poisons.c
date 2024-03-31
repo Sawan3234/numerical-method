@@ -6,9 +6,6 @@
 {
 int i,j,k;
 float a[10][10],g[10][10],h,xl,xh,yl,x;
-FILE *fp;
-
-fp=fopen("c:\\poisson.dat","w");
 printf("enter xl: ");
 scanf("%f",&xl);
 printf("enter xh: ");
@@ -57,4 +54,6 @@ printf("enter boundary conditions\n");
                printf("%f\t",a[i][j]);
                printf("\n");
             }
+
+     return 0;       
 }

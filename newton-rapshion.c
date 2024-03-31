@@ -15,7 +15,7 @@ return y;
 }
 void main()
 {
-float x0,x1,error=0.0001;
+float x0,x1,error=0.01;
 int i=0;
 printf("\nGuess initial root:");
 scanf("%f", &x1);
@@ -25,7 +25,7 @@ x0=x1-(f(x1)/fd(x1));
 x1=x0;
 i++;
 }while(fabs (f(x0))>error);
-printf("\nRoot=%f", x0);
+printf("Root=%f", x0);
 printf("\nNumber of iteration=%d",i);
 getch();
 }
