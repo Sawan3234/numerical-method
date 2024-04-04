@@ -10,7 +10,7 @@ return y;
 float fd( float x)
 {
 float y;
-y= 2*x+1;
+y= 2*x+4;
 return y;
 }
 void main()

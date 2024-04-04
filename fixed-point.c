@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+
 #include<math.h>
 float g ( float x)
 {
@@ -22,6 +22,6 @@ break;
 }
 x0=x;
 }
-getch();
+
 return 0;
 }

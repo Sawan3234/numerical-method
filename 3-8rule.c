@@ -29,7 +29,3 @@ ans=(3*h/8)*(f(a)+f(b)+sum);
 printf("\nIntegral value of f(x)=%f ", ans);
 getch();
 }
-
-
-
-

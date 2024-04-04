@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+#include<stdlib.h>
 #define S 4
 typedef float newvar[S+1][S+1];
 void entrow(int i,newvar u)
@@ -21,8 +22,9 @@ void oput(newvar u, int wd, int prsn)
     int i,j;
     for(i=i;i<=S;i++)
     {
-        for(j=1;j<=S;j++)
+        for(j=1;j<=S;j++){
         printf("%d,%d,%f",wd, prsn, u[i][j]);
+        }
         printf("\n");
 
     }
@@ -32,9 +34,10 @@ void oput(newvar u, int wd, int prsn)
     newvar u;
     float mer, ar, e, t;
    int i,j,itr, maxitr;
-   for(i=1;i<=S;i++)
+   for(i=1;i<=S;i++){
    for(j=1;j<=S;j++)
    u[i][j]=0;
+   }
    printf("\n  Enter the Boundary Condition\n");
    entrow(1,u); entrow(S,u);
    entcol(1,u); entcol(S,u);

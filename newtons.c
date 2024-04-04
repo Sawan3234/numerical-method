@@ -49,3 +49,4 @@ int main() {
         printf("Approximate root: %lf\n", root);
     return 0;
 }
+ 
